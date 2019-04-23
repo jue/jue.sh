@@ -156,7 +156,7 @@ export default {
       this.$axios.setHeader('Accept', 'application/json')
       this.$axios.setHeader('Content-Type', 'application/json')
       this.$axios
-        .post('http://api.jue.sh/mail/sent/fromjue', {
+        .post('https://api.jue.sh/mail/sent/fromjue', {
           name: this.info.name.con,
           company: this.info.company.con,
           tel: this.info.tel.con,
