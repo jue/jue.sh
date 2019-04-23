@@ -9,48 +9,53 @@
         <div class="form">
           <div class="row">
             <div class="col">
-              <div class="input input-text is-error">
+              <div class="input input-text" :class="info.name.isError ? 'is-error' : ''">
                 <label>称呼</label>
-                <input name="name" placeholder="请输入您的名字" type="text">
+                <input name="name" placeholder="请输入您的名字" type="text" v-model.trim="info.name.con">
                 <div class="input-info">必填</div>
               </div>
             </div>
             <div class="col">
-              <div class="input input-text">
+              <div class="input input-text" :class="info.company.isError ? 'is-error' : ''">
                 <label>公司</label>
-                <input name="company" placeholder="请输入公司或品牌名" type="text">
+                <input
+                  name="company"
+                  placeholder="请输入公司或品牌名"
+                  type="text"
+                  v-model.trim="info.company.con"
+                >
                 <div class="input-info"></div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <div class="input input-text">
+              <div class="input input-text" :class="info.tel.isError ? 'is-error' : ''">
                 <label>电话</label>
-                <input name="tel" placeholder="请输入手机号或座机号" type="text">
+                <input name="tel" placeholder="请输入手机号或座机号" type="text" v-model.trim="info.tel.con">
                 <div class="input-info">必填</div>
               </div>
             </div>
             <div class="col">
-              <div class="input input-text">
+              <div class="input input-text" :class="info.email.isError ? 'is-error' : ''">
                 <label>邮箱</label>
-                <input name="mail" placeholder="请输入您的邮箱" type="text">
+                <input name="mail" placeholder="请输入您的邮箱" type="text" v-model.trim="info.email.con">
                 <div class="input-info"></div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <div class="input input-text">
+              <div class="input input-text" :class="info.desc.isError ? 'is-error' : ''">
                 <label>项目描述</label>
-                <div class="textarea" contenteditable="true"></div>
+                <div class="textarea" contenteditable="true" v-html="info.desc.con"></div>
                 <div class="input-info">必填</div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col btn-wrap">
-              <button class="btn">发 送</button>
+              <button @click="submitInfo" class="btn">{{btnText}}</button>
             </div>
           </div>
         </div>
@@ -107,7 +112,88 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      btnText: '发 送',
+      info: {
+        name: {
+          con: '',
+          isError: false
+        },
+        company: {
+          con: '',
+          isError: false
+        },
+        tel: {
+          con: '',
+          isError: false
+        },
+        email: {
+          con: '',
+          isError: false
+        },
+        desc: {
+          con: '',
+          isError: false
+        }
+      }
+    }
+  },
+  methods: {
+    submitInfo() {
+      if(this.info.name.con == ''){
+        this.info.name.isError = true
+        return false
+      }
+      if(this.info.tel.con == ''){
+        this.info.tel.isError = true
+        return false
+      }
+
+      this.btnText = '发送中'
+
+      this.$axios.setHeader('Accept', 'application/json')
+      this.$axios.setHeader('Content-Type', 'application/json')
+      this.$axios
+        .post('http://api.jue.sh/mail/sent/fromjue', this.info)
+        .then(res => {
+          if (res.status == 201) {
+            this.btnText = '发送成功'
+            setTimeout(() => {
+              this.$emit('changeMenu')
+              this.name = ''
+              this.company = ''
+              this.tel = ''
+              this.email = ''
+              this.desc = ''
+              this.btnText = '发 送'
+            }, 1500)
+          }
+        })
+    }
+  },
+  watch:{
+    'info.name.con': {
+      handler(){
+        let _this = this
+        if(this.info.name.con != ''){
+          _this.info.name.isError = false
+        }
+      },
+      immediate: true
+    },
+    'info.tel.con': {
+      handler(){
+        let _this = this
+        if(this.info.tel.con != ''){
+          _this.info.tel.isError = false
+        }
+      },
+      immediate: true
+    }
+  }
+}
 </script>
 
 <style lang="less" scoped>

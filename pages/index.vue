@@ -7,7 +7,7 @@
     <Case/>
     <Customer/>
     <Contact @changeMenu="changeMenu"></Contact>
-    <contact-form v-show="toggleClose"></contact-form>
+    <contact-form v-show="toggleClose" @changeMenu="changeMenu"></contact-form>
   </div>
 </template>
 <script>
@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      toggleClose: false
+      toggleClose: true
     }
   },
   mounted() {
