@@ -1,6 +1,8 @@
-# jue
+# JUE.sh
 
-> 上海聚怡信息技术有限公司官网
+> 上海聚怡信息技术有限公司官网  
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/604bbac1-f8b7-434d-817e-302ae049fab9/deploy-status)](https://app.netlify.com/sites/jue/deploys)
 
 ## Build Setup
 

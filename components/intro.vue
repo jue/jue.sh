@@ -64,6 +64,7 @@ export default {
 <style lang="less">
 .typed-element {
   display: inline-block;
+  vertical-align: bottom;
 }
 .typed-element .typed-cursor {
   color: #eb4c49;

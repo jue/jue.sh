@@ -1,6 +1,9 @@
 <template>
-  <div class="wrapper-product" style="background-color: #3e6be2;">
-    <div class="container-product"></div>
+  <div class="wrapper-product" style="background-color: #febb12;">
+    <div class="container-product">
+      <div style="width: 40%;"></div>
+      <img src="https://filecdn.jue.sh/1555933018611.svg">
+    </div>
     <div class="sBtns-wrapper">
       <div class="flex1"></div>
       <div class="sBtns">
@@ -81,11 +84,13 @@ export default {
   z-index: 1;
   height: 700px;
   position: relative;
-  background-color: rgba(239, 239, 239, 1);
+  background-color: #febb12;
   .container-product {
     display: flex;
     height: 100%;
-    flex-direction: column;
+    img{
+      width: 800px;
+    }
   }
   .sBtns-wrapper {
     position: absolute;

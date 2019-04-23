@@ -19,7 +19,7 @@
             </svg>
           </i>
         </div>
-        <div class="sBtn-next sBtn-disabled">
+        <div class="sBtn-next">
           <i class="arrow">
             <svg
               version="1.1"
@@ -40,17 +40,14 @@
     <div class="list">
       <div v-swiper:mySwiper="swiperOption">
         <div class="swiper-wrapper">
-          <div :key="index" class="swiper-slide" v-for="(banner,index) in banners">
-            <a class="case-preview" href="#">
+          <div :key="index" class="swiper-slide" v-for="(bannerCase,index) in bannerCases">
+            <a class="case-preview" href="javascript:;">
               <div class="case-visuel" style="background-color:#bbd39e">
-                <div
-                  class="visuel"
-                  style="background-image:url('https://filecdn.jue.sh/1555406451029.png')"
-                ></div>
+                <div :style="{backgroundImage:`url(${bannerCase.url})`}" class="visuel"></div>
               </div>
               <div class="inner">
-                <div class="title">小程序活动页</div>
-                <div class="desc">小程序活动页内容说明，小程序活动页内容说明，小程序活动页内容说明</div>
+                <div class="title">{{bannerCase.title}}</div>
+                <div class="desc">{{bannerCase.desc}}</div>
               </div>
             </a>
           </div>
@@ -61,25 +58,49 @@
 </template>
 <script>
 import pageTitle from '@/components/pageTitle.vue'
-// import Swiper from '@/components/swiper.vue'
 export default {
   components: {
     pageTitle
   },
-  mounted() {},
+  beforeMount() {
+    if (document.body.clientWidth <= 414) {
+      this.swiperOption.slidesPerView = 1
+    } else {
+      this.swiperOption.slidesPerView = 4
+    }
+  },
   data() {
     return {
-      banners: [
-        'https://filecdn.jue.sh/1555405097783.png',
-        'https://filecdn.jue.sh/1555405131832.png',
-        'https://filecdn.jue.sh/1555405097783.png',
-        'https://filecdn.jue.sh/1555405131832.png'
+      clientWidth: null,
+      bannerCases: [
+        {
+          title: 'BIMGO',
+          desc: '基于BIM的施工管理、运营平台',
+          url: 'https://filecdn.jue.sh/1556002545584.png'
+        },
+        {
+          title: '微商',
+          desc: '电商类小程序',
+          url: 'https://filecdn.jue.sh/1556001859475.png'
+        },
+        {
+          title: '微信公众号',
+          desc: '在线互联网社区',
+          url: 'https://filecdn.jue.sh/1556002032220.png'
+        },
+        {
+          title: 'PC网站',
+          desc: '后台统计系统',
+          url: 'https://filecdn.jue.sh/1556002428838.png'
+        }
       ],
       swiperOption: {
         slidesPerView: 4,
         centeredSlides: true,
         paginationClickable: true,
-        spaceBetween: 30
+        spaceBetween: 30,
+        nextButton: '.sBtn-next',
+        prevButton: '.sBtn-prev'
       }
     }
   }
@@ -116,7 +137,7 @@ export default {
             width: 30px;
           }
         }
-        &.sBtn-disabled {
+        &.swiper-button-disabled {
           opacity: 0.4;
         }
       }
@@ -158,8 +179,9 @@ export default {
       left: 0;
       right: 0;
       bottom: 0;
-      background-size: auto 100%;
-      background-position: center right;
+      background-size: 100% 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
       z-index: 1;
       transform: scale(1.1);
       transition: transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -207,17 +229,14 @@ export default {
         .sBtn-next {
           width: 30px;
           height: 30px;
-          .arrow{
-            svg{
+          .arrow {
+            svg {
               width: 20px;
             }
           }
         }
       }
     }
-  }
-  .swiper-slide {
-    width: 80% !important;
   }
   .case-preview {
     .inner {
@@ -232,6 +251,9 @@ export default {
         line-height: 1.4;
       }
     }
+  }
+  .list {
+    padding: 20px;
   }
 }
 </style>
