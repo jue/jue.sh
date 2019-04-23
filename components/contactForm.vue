@@ -48,7 +48,7 @@
             <div class="col">
               <div class="input input-text" :class="info.desc.isError ? 'is-error' : ''">
                 <label>项目描述</label>
-                <div class="textarea" contenteditable="true" v-html="info.desc.con"></div>
+                <textarea class="textarea" placeholder="简单地描述一下您的项目" v-model="info.desc.con"></textarea>
                 <div class="input-info">必填</div>
               </div>
             </div>
