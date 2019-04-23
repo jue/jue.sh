@@ -168,11 +168,11 @@ export default {
             this.btnText = '发送成功'
             setTimeout(() => {
               this.$emit('changeMenu')
-              this.name = ''
-              this.company = ''
-              this.tel = ''
-              this.email = ''
-              this.desc = ''
+              this.info.name.con = ''
+              this.info.company.con = ''
+              this.info.tel.con = ''
+              this.info.email.con = ''
+              this.info.desc.con = ''
               this.btnText = '发 送'
             }, 1500)
           }
