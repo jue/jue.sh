@@ -156,7 +156,13 @@ export default {
       this.$axios.setHeader('Accept', 'application/json')
       this.$axios.setHeader('Content-Type', 'application/json')
       this.$axios
-        .post('http://api.jue.sh/mail/sent/fromjue', this.info)
+        .post('http://api.jue.sh/mail/sent/fromjue', {
+          name: this.info.name.con,
+          company: this.info.company.con,
+          tel: this.info.tel.con,
+          email: this.info.email.con,
+          desc: this.info.desc.con
+        })
         .then(res => {
           if (res.status == 201) {
             this.btnText = '发送成功'
