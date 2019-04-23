@@ -35,7 +35,7 @@ export default {
   },
   data() {
     return {
-      toggleClose: true
+      toggleClose: false
     }
   },
   mounted() {
