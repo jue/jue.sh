@@ -21,7 +21,7 @@ import Contact from '@/components/contact.vue'
 import ContactForm from '@/components/contactForm.vue'
 export default {
   head: {
-    title: '觉·上海 JUE.sh'
+    title: '觉·上海 JUE.sh  -  上海聚怡信息技术有限公司'
   },
   components: {
     Header,
