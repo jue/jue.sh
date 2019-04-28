@@ -50,7 +50,6 @@
         </span>
         <div class="desc">
           快速上手的BIM应用工具，高性价比的工程管理工具，开放共享的数据可视化工具。
-          快速上手的BIM应用工具，高性价比的工程管理工具，开放共享的数据可视化工具。
         </div>
         <ButtonLink :linkInfo="linkInfo"/>
       </div>
@@ -82,7 +81,8 @@ export default {
 }
 .wrapper-product {
   z-index: 1;
-  height: 700px;
+  height: 100vw;
+  max-height: 700px;
   position: relative;
   background-color: #febb12;
   .container-product {
