@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper-case">
+    <div class="case-blank"></div>
     <div class="container-case">
       <div class="case-title">开发案例</div>
       <div class="sBtns">
@@ -108,8 +109,17 @@ export default {
 </script>
 <style lang="less" scoped>
 .wrapper-case {
-  margin-top: 215px;
+  padding-top: 200px;
   padding-bottom: 200px;
+  position: relative;
+  .case-blank {
+    height: 268px;
+    background: #efefef;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .container-case {
     display: flex;
     .case-title {
@@ -202,14 +212,8 @@ export default {
   margin: 20px auto;
 }
 
-@media only screen and (max-width: 1024px) {
-  .wrapper-case {
-    margin-top: 110px;
-  }
-}
 @media only screen and (max-width: 768px) {
   .wrapper-case {
-    margin-top: 55px;
     .case-title {
       padding: 20px 20px 20px 50px;
     }
@@ -217,8 +221,12 @@ export default {
 }
 @media only screen and (max-width: 414px) {
   .wrapper-case {
+    padding-top: 0;
+    .case-blank{
+      height: 34px;
+    }
     .container-case {
-      margin-top: 55px;
+      margin-top: 100px;
       .case-title {
         font-size: 20px;
         padding: 20px 0;

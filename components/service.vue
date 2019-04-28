@@ -194,7 +194,7 @@
   margin-top: 300px;
   position: relative;
   .service-blank {
-    height: 750px;
+    height: 100%;
     background: #efefef;
     width: 35%;
     position: absolute;
