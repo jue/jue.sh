@@ -212,6 +212,7 @@ export default {
   z-index: 10;
   top: 0;
   left: 0;
+  overflow-y: auto;
 }
 .head {
   color: #808080;
