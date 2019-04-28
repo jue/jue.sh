@@ -51,11 +51,11 @@ export default {
   data() {
     return {
       strings: [
-        'IOS/Android APP开发',
+        '小程序开发',
         '移动H5活动开发',
         '微信公众号开发',
-        '小程序开发',
-        'PC系统开发'
+        'IOS/Android APP开发',
+        '网站系统建设'
       ]
     }
   }

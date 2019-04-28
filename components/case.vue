@@ -226,7 +226,6 @@ export default {
       height: 34px;
     }
     .container-case {
-      margin-top: 100px;
       .case-title {
         font-size: 20px;
         padding: 20px 0;
