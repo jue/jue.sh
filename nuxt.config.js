@@ -15,6 +15,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'https://filecdn.jue.sh/1553233209315.png' }
+    ],
+    script: [
+      {src: 'https://hm.baidu.com/hm.js?f571dbb81aeada2167064943545bd35d'}
     ]
   },
 
@@ -35,7 +38,8 @@ export default {
   */
   plugins: [
     { src: '~/plugins/typed-js.js', ssr: true },
-    { src: '~/plugins/vue-awesome-swiper.js', ssr: false }
+    { src: '~/plugins/vue-awesome-swiper.js', ssr: false },
+    { src: '~/plugins/baiduGa.js', ssr: false }
   ],
 
   /*
