@@ -63,7 +63,7 @@ export default {
 </script>
 <style lang="less">
 .typed-element {
-  display: inline-block;
+  display: inline-block!important;
   vertical-align: bottom;
 }
 .typed-element .typed-cursor {
