@@ -25,13 +25,13 @@
           <br>我们是时效性团队，更是您值得托付的合作伙伴。
           <br>
           <br>
-          <ButtonLink 
-            @click="changeMenu"
+          <!-- <ButtonLink 
             :linkInfo="{
-              text: '与我联系',
+              text: 'JUE.sh',
               href: ''
             }"
-          />
+          /> -->
+          <strong class="site-url">JUE.sh</strong>
         </span>
       </div>
     </div>
@@ -59,15 +59,15 @@ export default {
         '网站系统建设'
       ]
     }
-  },
-  methods: {
-    changeMenu() {
-      this.$emit('changeMenu')
-    }
   }
 }
 </script>
 <style lang="less">
+.site-url{
+  color: #eb4c49;
+  font-size: 24px;
+  font-weight: 800;
+}
 .typed-element {
   display: inline-block!important;
   vertical-align: bottom;

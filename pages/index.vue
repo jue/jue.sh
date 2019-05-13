@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header :toggleClose="toggleClose" @changeMenu="changeMenu"></Header>
-    <Intro @changeMenu="changeMenu"></Intro>
+    <Intro></Intro>
     <Product/>
     <Service/>
     <Case/>
