@@ -25,7 +25,8 @@
           <br>我们是时效性团队，更是您值得托付的合作伙伴。
           <br>
           <br>
-          <ButtonLink
+          <ButtonLink 
+            @click="changeMenu"
             :linkInfo="{
               text: '与我联系',
               href: ''
@@ -57,6 +58,11 @@ export default {
         'IOS/Android APP开发',
         '网站系统建设'
       ]
+    }
+  },
+  methods: {
+    changeMenu() {
+      this.$emit('changeMenu')
     }
   }
 }
