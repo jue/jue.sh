@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "cross-env": "^5.2.0",
-    "nuxt": "^2.6.2",
+    "nuxt": "latest",
     "vue-awesome-swiper": "^2.6.7",
     "vue-typed-js": "^0.1.2"
   },
