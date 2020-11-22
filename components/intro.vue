@@ -31,7 +31,7 @@
               href: ''
             }"
           /> -->
-          <strong class="site-url">JUE.sh</strong>
+          <strong class="site-url">www.JUE.sh.cn</strong>
         </span>
       </div>
     </div>
