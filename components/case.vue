@@ -77,22 +77,22 @@ export default {
         {
           title: 'BIMGO',
           desc: '基于BIM的施工管理、运营平台',
-          url: 'https://filecdn.jue.sh/1556002545584.png'
+          url: 'https://img14.360buyimg.com/ddimg/jfs/t1/142314/22/15185/121113/5fb9e2ebEb8be06f9/856ac8ed808722ea.png'
         },
         {
           title: '微商',
           desc: '电商类小程序',
-          url: 'https://filecdn.jue.sh/1556001859475.png'
+          url: 'https://img13.360buyimg.com/ddimg/jfs/t1/137523/11/16803/463651/5fb9e2ecE8e0573a3/36d260b59df12a36.png'
         },
         {
           title: '微信公众号',
           desc: '在线互联网社区',
-          url: 'https://filecdn.jue.sh/1556002032220.png'
+          url: 'https://img10.360buyimg.com/ddimg/jfs/t1/155016/17/6802/466718/5fb9e2ecE027164a1/2f7669f98644d446.png'
         },
         {
           title: 'PC网站',
           desc: '后台统计系统',
-          url: 'https://filecdn.jue.sh/1556002428838.png'
+          url: 'https://img14.360buyimg.com/ddimg/jfs/t1/151206/18/7564/170664/5fb9e2ebE11a4ee69/811c4c2e1a0a9ceb.png'
         }
       ],
       swiperOption: {
