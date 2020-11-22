@@ -2,7 +2,7 @@
   <div class="wrapper-product" style="background-color: #febb12;">
     <div class="container-product">
       <div style="width: 40%;"></div>
-      <img src="https://filecdn.jue.sh/1555933018611.svg">
+      <img src="/imgs/eg/1555933018611.svg">
     </div>
     <div class="sBtns-wrapper">
       <div class="flex1"></div>

@@ -13,9 +13,6 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'https://filecdn.jue.sh/1553233209315.png' }
-    ],
     script: [
       {src: 'https://hm.baidu.com/hm.js?f571dbb81aeada2167064943545bd35d'}
     ]
