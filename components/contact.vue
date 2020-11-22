@@ -13,7 +13,7 @@
         <div class="info">
           <div class="flex1"></div>
           <div class="socials">
-            <a class="tel" data-tooltip="电话: 17187488188" href="tel:+8617187488188">
+            <a class="tel" data-tooltip="电话: 17612181227" href="tel:+8617612181227">
               <svg
                 version="1.1"
                 viewBox="0 0 1024 1024"
