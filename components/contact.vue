@@ -40,7 +40,7 @@
                 ></path>
               </svg>
               <span class="qrcode-box">
-                <img src="https://filecdn.jue.sh/1555909757852.png">
+                <img src="https://ae03.alicdn.com/kf/H7a62cefb15be4dfbb3a09c6a2c39ba5am.jpg">
               </span>
             </a>
             <a @click="changeMenu" class="msg" data-tooltip="给我们留言" href="javascript:;">
