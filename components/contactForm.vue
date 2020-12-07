@@ -72,7 +72,7 @@
                 p-id="8244"
               ></path>
             </svg>
-            <span>+86 17187488188</span>
+            <span>+86 17612181227</span>
           </div>
           <div class="item">
             <svg
@@ -90,7 +90,7 @@
                 p-id="9701"
               ></path>
             </svg>
-            <span>fon@jue.sh</span>
+            <span>fon@juyir.com</span>
           </div>
           <div class="item">
             <svg
