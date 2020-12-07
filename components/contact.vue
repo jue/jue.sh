@@ -57,7 +57,7 @@
             </a>
           </div>
           <div class="copyright">
-            COPYRIGHT © 2019
+            COPYRIGHT © 2020
             <span class="com-name">上海聚怡信息技术有限公司</span>
             <span class="studio-name">觉·上海 技术工作室</span>
           </div>
