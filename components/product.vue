@@ -68,7 +68,7 @@ export default {
     return {
       linkInfo: {
         text: '访问官网',
-        href: 'https://www.bimgosoft.com'
+        href: 'https://www.bimgo.net'
       }
     }
   }
