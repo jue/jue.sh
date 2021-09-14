@@ -31,7 +31,7 @@
               href: ''
             }"
           /> -->
-          <strong class="site-url">www.JUE.sh.cn</strong>
+          <strong class="site-url">上海聚怡信息技术有限公司</strong>
         </span>
       </div>
     </div>
