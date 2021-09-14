@@ -90,7 +90,7 @@
                 p-id="9701"
               ></path>
             </svg>
-            <span>fon@juyir.com</span>
+            <span>fon@jue.sh</span>
           </div>
           <div class="item">
             <svg
