@@ -1,24 +1,11 @@
-# JUE.sh
+# STATIC
 
-> 上海聚怡信息技术有限公司官网  
+**This directory is not required, you can delete it if you don't want to use it.**
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/604bbac1-f8b7-434d-817e-302ae049fab9/deploy-status)](https://app.netlify.com/sites/jue/deploys)
+This directory contains your static files.
+Each file inside this directory is mapped to `/`.
+Thus you'd want to delete this README.md before deploying to production.
 
-## Build Setup
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
 
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/assets#static).
