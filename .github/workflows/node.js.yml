@@ -25,7 +25,7 @@ jobs:
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
-        GITHUB_TOKEN: '7a6ad0f8e95fa6f7a8655b24b2b746290bca118c'
+        ACCESS_TOKEN: '7a6ad0f8e95fa6f7a8655b24b2b746290bca118c'
         BRANCH: gh-pages
         FOLDER: ./dist
         commitMessage: ${{ github.event.head_commit.message }}
