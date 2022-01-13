@@ -1,0 +1,32 @@
+name: 构建并发布
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: 构建
+      run: |
+        npm install
+        npm run generate --if-present
+
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v2.2.0
+      env:
+        PERSONAL_TOKEN: '7a6ad0f8e95fa6f7a8655b24b2b746290bca118c'
+        PUBLISH_BRANCH: gh-pages 
+        PUBLISH_DIR: ./dist
+      with:
+        commitMessage: ${{ github.event.head_commit.message }}
