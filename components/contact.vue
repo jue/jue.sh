@@ -57,9 +57,10 @@
             </a>
           </div>
           <div class="copyright">
-            COPYRIGHT © 2020
+            COPYRIGHT © 2022
             <span class="com-name">上海聚怡信息技术有限公司</span>
             <span class="studio-name">觉·上海 技术工作室</span>
+            <span class="beian"><a target="_blank" href="https://beian.miit.gov.cn/">沪ICP备14013934号-1</a></span>  
           </div>
         </div>
       </div>
@@ -214,6 +215,14 @@ export default {
         display: block;
         font-size: 12px;
         padding-top: 5px;
+      }
+      .beian {
+        display: block;
+        font-size: 12px;
+        padding-top: 5px;
+        a {
+          color: rgba(255, 255, 255, 1);
+        }
       }
     }
   }
