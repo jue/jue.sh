@@ -6,14 +6,19 @@
         <div class="contact">
           <p>
             我们提供专业技术开发、服务维护
-            <br>很期待与您一起合作！
+            <br />很期待与您一起合作！
           </p>
-          <a @click="changeMenu" class="link" href="javascript:;">点击联系我们</a>
+          <a @click="changeMenu" class="link" href="javascript:;"
+            >点击联系我们</a
+          >
         </div>
         <div class="info">
-          <div class="flex1"></div>
           <div class="socials">
-            <a class="tel" data-tooltip="电话: 17612181227" href="tel:+8617612181227">
+            <a
+              class="tel"
+              data-tooltip="电话: 17612181227"
+              href="tel:+8617612181227"
+            >
               <svg
                 version="1.1"
                 viewBox="0 0 1024 1024"
@@ -40,10 +45,17 @@
                 ></path>
               </svg>
               <span class="qrcode-box">
-                <img src="https://ae03.alicdn.com/kf/H7a62cefb15be4dfbb3a09c6a2c39ba5am.jpg">
+                <img
+                  src="https://ae03.alicdn.com/kf/H7a62cefb15be4dfbb3a09c6a2c39ba5am.jpg"
+                />
               </span>
             </a>
-            <a @click="changeMenu" class="msg" data-tooltip="给我们留言" href="javascript:;">
+            <a
+              @click="changeMenu"
+              class="msg"
+              data-tooltip="给我们留言"
+              href="javascript:;"
+            >
               <svg
                 version="1.1"
                 viewBox="0 0 1024 1024"
@@ -59,8 +71,9 @@
           <div class="copyright">
             COPYRIGHT © 2022
             <span class="com-name">上海聚怡信息技术有限公司</span>
-            <span class="studio-name">觉·上海 技术工作室</span>
-            <span class="beian"><a target="_blank" href="https://beian.miit.gov.cn/">沪ICP备14013934号-1</a></span>  
+            <a class="beian" target="_blank" href="https://beian.miit.gov.cn/"
+              >沪ICP备14013934号-1</a
+            >
           </div>
         </div>
       </div>
@@ -72,8 +85,8 @@ export default {
   methods: {
     changeMenu() {
       this.$emit('changeMenu')
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -217,12 +230,11 @@ export default {
         padding-top: 5px;
       }
       .beian {
+        padding-top: 5px;
         display: block;
         font-size: 12px;
-        padding-top: 5px;
-        a {
-          color: rgba(255, 255, 255, 1);
-        }
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
       }
     }
   }
